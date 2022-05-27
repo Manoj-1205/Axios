@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Get from "./axios/get";
 import axios from "axios";
+import "./Main.css";
+import { useNavigate } from "react-router-dom";
 /*
 const Formdata = () => {
   const [fname, setFname] = useState("");
@@ -48,7 +50,7 @@ const Main = () => {
   const [check, setcheck] = useState(false);
   const [id, setId] = useState(null);
   const [infofromserver, setInfo] = useState("");
-
+  const navigate = useNavigate();
   const validate = () => {
     setcheck(true);
   };
@@ -141,7 +143,7 @@ const Main = () => {
         <button type="submit">Delete</button>
       </form>
       <br />
-      <h4>Diplaying data fetched from server</h4>
+      <button onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
 };
